@@ -21,5 +21,8 @@ echo "13 43 13 34 31 22 30" | ./stddev
 ```
 to obtain the standard deviation of the numbers.
 
-You can yield numbers to the tools that are separated by newlines, tabs or spaces.
-Gentoo ebuild comming soon.
+You can yield numbers to the tools that are separated by newlines,
+tabs or spaces. 
+Gentoo users might install the tools with the provided ebuild: 
+`stattools-1.ebuild`
+
