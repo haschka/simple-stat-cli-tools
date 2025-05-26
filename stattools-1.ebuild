@@ -15,7 +15,7 @@ IUSE=""
 src_compile() {
         $(tc-getCC) ${CFLAGS} histogram.c -o histogram
 	$(tc-getCC) ${CFLAGS} mean.c -o mean
-	$(tc-getCC) ${CFLAGS} stddev.c -o stddev
+	$(tc-getCC) ${CFLAGS} stddev.c -o stddev -lm
 }
 
 src_install() {
