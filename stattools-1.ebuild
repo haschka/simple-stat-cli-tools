@@ -16,10 +16,12 @@ src_compile() {
         $(tc-getCC) ${CFLAGS} histogram.c -o histogram
 	$(tc-getCC) ${CFLAGS} mean.c -o mean
 	$(tc-getCC) ${CFLAGS} stddev.c -o stddev -lm
+	$(tc-getCC) ${CFLAGS} random_sample.c -o random_sample
 }
 
 src_install() {
         dobin histogram
 	dobin mean
 	dobin stddev
+	dobin random_sample
 }
