@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
   double random_value_d, random_maximum, random_normalized, random_in_range_d;
 
   if(argc < 3) {
-    printf("%s extracts random sample of items acquired from stdin. \n"
+    printf("%s extracts a random sample of items acquired from stdin. \n"
 	   "  Usage: \n"
 	   "  %s [seed] [number_of_items_to_extract] \n"
 	   "  Example: \n"
