@@ -22,7 +22,7 @@ echo "13 43 13 34 31 22 30" | ./stddev
 ```
 to obtain the standard deviation of the numbers.
 ```
-echo "Hello Bonjour GutenTag Buongiorno" | ./randomsample 42 2
+echo "مرحبا Bonjour GutenTag Buongiorno" | ./randomsample 42 2
 ```
 to obtain two random greetings from the four provided, 
 under the given seed 42.
