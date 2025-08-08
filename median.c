@@ -1,17 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int comp(const void* a, const void* b) {
+static inline int comp(const void* a, const void* b) {
 
   double* dap = (double*)a;
   double* dbp = (double*)b;
 
   if(dap[0] <  dbp[0]) return(-1);
   if(dap[0] == dbp[0]) return( 0);
-  if(dap[0] >  dap[0]) return( 1);
+  if(dap[0] >  dbp[0]) return( 1);
 }
 
-void print_value(double value) {
+static inline void print_value(double value) {
   printf("%12.6E\n",value);
 }
 
@@ -45,6 +45,7 @@ int main(int argc, char** argv) {
       print_value(values[0]);
       free(values);
       return(0);
+      
     } else {
     
       qsort(values,counter,sizeof(double),comp);
