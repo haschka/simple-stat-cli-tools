@@ -15,13 +15,19 @@ IUSE=""
 src_compile() {
         $(tc-getCC) ${CFLAGS} histogram.c -o histogram
 	$(tc-getCC) ${CFLAGS} mean.c -o mean
+	$(tc-getCC) ${CFLAGS} median.c -o median
 	$(tc-getCC) ${CFLAGS} stddev.c -o stddev -lm
 	$(tc-getCC) ${CFLAGS} random_sample.c -o random_sample
+	$(tc-getCC) ${CFLAGS} maximum.c -o maximum
+	$(tc-getCC) ${CFLAGS} minimum.c -o minimum
 }
 
 src_install() {
         dobin histogram
 	dobin mean
+	dobin median
 	dobin stddev
 	dobin random_sample
+	dobin maximum
+	dobin minimum
 }

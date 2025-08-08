@@ -1,26 +1,42 @@
 # simple-stat-cli-tools
-Provides Mean / Stddev / Histrogram / Random Sampling and in the future more from the cli
+Provides Mean / Stddev / Histrogram / Random Sampling 
+and more from the cli
 
 compile with:
 ```
 gcc -O2 -march=native histogram.c -o histogram
 gcc -O2 -march=native mean.c -o mean
 gcc -O2 -march=native stddev.c -o stddev
+gcc -O2 -march=native median.c -o median
+gcc -O2 -march=native minimum.c -o minimum
+gcc -O2 -march=native maximum.c -o maximum
 gcc -O2 -march=native random_sample.c -o random_sample
 ```
 use like:
 ```
 echo "13 43 13 34 31 22 30" | ./histgroam 3
 ```
-to get a histogram of three bins for the values sent
+to get a histogram of three bins for the values sent.
 ```
 echo "13 43 13 34 31 22 30" | ./mean
 ```
-to get the mean of the numbers
+to get the mean of the numbers.
+```
+echo "13 43 13 34 31 22 30" | ./median
+```
+to obtain the median of the numbers.
 ```
 echo "13 43 13 34 31 22 30" | ./stddev
 ```
 to obtain the standard deviation of the numbers.
+```
+echo "13 43 13 34 31 22 30" | ./minimum
+```
+to obtain the minimum of the numbers.
+```
+echo "13 43 13 34 31 22 30" | ./maximum
+```
+to obtain the maximum of the numbers.
 ```
 echo "مرحبا Bonjour GutenTag Buongiorno" | ./randomsample 42 2
 ```

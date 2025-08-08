@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
 
   size_t i;
   
-  int counter;
+  size_t counter;
 
   double *values = (double*)malloc(sizeof(double)*10000);
   int n_bins;
