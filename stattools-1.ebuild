@@ -20,6 +20,7 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} random_sample.c -o random_sample
 	$(tc-getCC) ${CFLAGS} correlate.c -o correlate -lm
 	$(tc-getCC) ${CFLAGS} cossimilarity.c -o cossimilarity -lm 
+	$(tc-getCC) ${CFLAGS} linearregression.c -o linearregression
 	$(tc-getCC) ${CFLAGS} maximum.c -o maximum
 	$(tc-getCC) ${CFLAGS} minimum.c -o minimum
 }
@@ -31,7 +32,8 @@ src_install() {
 	dobin stddev
 	dobin random_sample
 	dobin cossimilarity
-	dobin correlate	
+	dobin correlate
+	dobin linearregression
 	dobin maximum
 	dobin minimum
 }

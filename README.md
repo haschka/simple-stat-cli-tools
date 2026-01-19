@@ -10,6 +10,7 @@ gcc -O2 -march=native stddev.c -o stddev -lm
 gcc -O2 -march=native median.c -o median -lm 
 gcc -O2 -march=native minimum.c -o minimum -lm 
 gcc -O2 -march=native maximum.c -o maximum -lm 
+gcc -O2 -march=native linearregression.c -o linearregression -lm
 gcc -O2 -march=native correlate.c -o correlate -lm 
 gcc -O2 -march=native random_sample.c -o random_sample -lm 
 ```
@@ -48,6 +49,12 @@ echo "1. 3. 0.5 1.5 5. 8." | ./cossimilarity
 ```
 to obtain the cosine similarity between the vectors:
 `1. 0.5 5.` and `3. 1.5 8`.
+```
+echo "1. 0.5 2. 0.9 3. 1.2" | ./linearregression
+```
+to obtain the linear regression through the points 
+`(1., 0.5)`, `(2.,0.9)` and `(3., 1.2)`
+
 ```
 echo "مرحبا Bonjour GutenTag Buongiorno" | ./randomsample 42 2
 ```
