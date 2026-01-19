@@ -10,6 +10,7 @@ gcc -O2 -march=native stddev.c -o stddev
 gcc -O2 -march=native median.c -o median
 gcc -O2 -march=native minimum.c -o minimum
 gcc -O2 -march=native maximum.c -o maximum
+gcc -O2 -march=native correlate.c -o correlate
 gcc -O2 -march=native random_sample.c -o random_sample
 ```
 use like:
@@ -37,6 +38,11 @@ to obtain the minimum of the numbers.
 echo "13 43 13 34 31 22 30" | ./maximum
 ```
 to obtain the maximum of the numbers.
+```
+echo "1. 3. 0.5 1.5 5. 8." | ./correlate
+```
+to obtain the pearson correlation between the vectors:
+`1. 0.5 5.` and `3. 1.5 8`.
 ```
 echo "مرحبا Bonjour GutenTag Buongiorno" | ./randomsample 42 2
 ```

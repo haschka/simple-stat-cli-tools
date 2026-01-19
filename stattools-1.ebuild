@@ -18,6 +18,7 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} median.c -o median
 	$(tc-getCC) ${CFLAGS} stddev.c -o stddev -lm
 	$(tc-getCC) ${CFLAGS} random_sample.c -o random_sample
+	$(tc-getCC) ${CFLAGS} correlate.c -o correlate
 	$(tc-getCC) ${CFLAGS} maximum.c -o maximum
 	$(tc-getCC) ${CFLAGS} minimum.c -o minimum
 }
@@ -28,6 +29,7 @@ src_install() {
 	dobin median
 	dobin stddev
 	dobin random_sample
+	dobin correlate	
 	dobin maximum
 	dobin minimum
 }
