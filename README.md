@@ -4,14 +4,14 @@ and more from the cli
 
 compile with:
 ```
-gcc -O2 -march=native histogram.c -o histogram
-gcc -O2 -march=native mean.c -o mean
-gcc -O2 -march=native stddev.c -o stddev
-gcc -O2 -march=native median.c -o median
-gcc -O2 -march=native minimum.c -o minimum
-gcc -O2 -march=native maximum.c -o maximum
-gcc -O2 -march=native correlate.c -o correlate
-gcc -O2 -march=native random_sample.c -o random_sample
+gcc -O2 -march=native histogram.c -o histogram -lm 
+gcc -O2 -march=native mean.c -o mean -lm 
+gcc -O2 -march=native stddev.c -o stddev -lm 
+gcc -O2 -march=native median.c -o median -lm 
+gcc -O2 -march=native minimum.c -o minimum -lm 
+gcc -O2 -march=native maximum.c -o maximum -lm 
+gcc -O2 -march=native correlate.c -o correlate -lm 
+gcc -O2 -march=native random_sample.c -o random_sample -lm 
 ```
 use like:
 ```
@@ -42,6 +42,11 @@ to obtain the maximum of the numbers.
 echo "1. 3. 0.5 1.5 5. 8." | ./correlate
 ```
 to obtain the pearson correlation between the vectors:
+`1. 0.5 5.` and `3. 1.5 8`.
+```
+echo "1. 3. 0.5 1.5 5. 8." | ./cossimilarity
+```
+to obtain the cosine similarity between the vectors:
 `1. 0.5 5.` and `3. 1.5 8`.
 ```
 echo "مرحبا Bonjour GutenTag Buongiorno" | ./randomsample 42 2
