@@ -8,6 +8,7 @@ gcc -O2 -march=native histogram.c -o histogram -lm
 gcc -O2 -march=native mean.c -o mean -lm 
 gcc -O2 -march=native stddev.c -o stddev -lm 
 gcc -O2 -march=native median.c -o median -lm 
+gcc -O2 -march=native percentile.c -o percentile -lm
 gcc -O2 -march=native minimum.c -o minimum -lm 
 gcc -O2 -march=native maximum.c -o maximum -lm 
 gcc -O2 -march=native linearregression.c -o linearregression -lm
@@ -31,6 +32,10 @@ to obtain the median of the numbers.
 echo "13 43 13 34 31 22 30" | ./stddev
 ```
 to obtain the standard deviation of the numbers.
+```
+echo "13 43 13 34 31 22 30" | ./percentile 55
+```
+to obtain the 55th percentile of the numbers. 
 ```
 echo "13 43 13 34 31 22 30" | ./minimum
 ```

@@ -17,9 +17,10 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} mean.c -o mean
 	$(tc-getCC) ${CFLAGS} median.c -o median
 	$(tc-getCC) ${CFLAGS} stddev.c -o stddev -lm
+	$(tc-getCC) ${CFLAGS} percentile.c -o percentile -lm 
 	$(tc-getCC) ${CFLAGS} random_sample.c -o random_sample
 	$(tc-getCC) ${CFLAGS} correlate.c -o correlate -lm
-	$(tc-getCC) ${CFLAGS} cossimilarity.c -o cossimilarity -lm 
+	$(tc-getCC) ${CFLAGS} cossimilarity.c -o cossimilarity -lm
 	$(tc-getCC) ${CFLAGS} linearregression.c -o linearregression
 	$(tc-getCC) ${CFLAGS} maximum.c -o maximum
 	$(tc-getCC) ${CFLAGS} minimum.c -o minimum
@@ -30,6 +31,7 @@ src_install() {
 	dobin mean
 	dobin median
 	dobin stddev
+	dobin percentile
 	dobin random_sample
 	dobin cossimilarity
 	dobin correlate
